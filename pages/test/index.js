@@ -3,6 +3,7 @@ import Header from '@components/Header'
 import Head from 'next/head'
 import React from 'react'
 import Link from 'next/link'
+import { event } from '../../lib/gtag'
 
 export default function test() {
     return (
@@ -14,8 +15,9 @@ export default function test() {
             <main>
                 <Header title="Welcome to my app!" />
                 <p className="description">
-                   xxxxxxx
+                    xxxxxxx
                 </p>
+                <button onClick={() => event("buy", "button", "button", "buy")}>buy</button>
                 <Link
                     id="logo"
                     href={{
